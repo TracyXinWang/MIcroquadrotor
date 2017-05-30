@@ -1,0 +1,454 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_dark"
+    tools:context=".MainActivity" >
+
+    <RelativeLayout
+        android:id="@+id/R1"
+        android:layout_width="200sp"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/tv_power_note"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" POWER"
+            android:textColor="@android:color/background_light"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/et_power"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_power_note"
+            android:cursorVisible="false"
+            android:enabled="false"
+            android:textColor="#ff0000"
+            android:textSize="18sp"
+            android:text="100" />
+
+        <TextView
+            android:id="@+id/tv_height_note"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/et_power"
+            android:text=" HEIGHT"
+            android:textColor="@android:color/background_light"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/et_height"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_height_note"
+            android:cursorVisible="false"
+            android:enabled="false"
+            android:textColor="#ff0000"
+            android:textSize="18sp"
+            android:text="500" />
+        
+        
+        <TextView
+            android:id="@+id/tv_gesture_note"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/et_height"
+            android:text=" GESTURE"
+            android:textColor="@android:color/background_light"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/et_pitch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_gesture_note"
+            android:cursorVisible="false"
+            android:enabled="false"
+            android:textColor="#ff0000"
+            android:textSize="19sp" />
+
+        <EditText
+            android:id="@+id/et_yaw"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/et_pitch"
+            android:cursorVisible="false"
+            android:enabled="false"
+            android:textColor="#ff0000"
+            android:textSize="19sp" />
+
+        <EditText
+            android:id="@+id/et_roll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/et_yaw"
+            android:cursorVisible="false"
+            android:enabled="false"
+            android:textColor="#ff0000"
+            android:textSize="19sp" />
+
+        <TextView
+            android:id="@+id/tv_tem_note"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/et_roll"
+            android:text=" TEMPERATURE"
+            android:textColor="@android:color/background_light"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/et_tem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_tem_note"
+            android:cursorVisible="false"
+            android:enabled="false"
+            android:textColor="#ff0000"
+            android:textSize="18sp"
+            android:text="20" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/R1"
+        android:text="  运行输出"
+        android:textColor="#fffff0"
+        android:textSize="15sp" />
+
+    <RelativeLayout
+        android:id="@+id/R2"
+        android:layout_width="200sp"
+        android:layout_height="150sp"
+        android:layout_below="@id/tv_note"
+        android:layout_toRightOf="@id/R1"
+        android:paddingRight="5sp" >
+
+        <ScrollView
+            android:id="@+id/tv_scrollview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fadeScrollbars="false"
+            android:scrollbarAlwaysDrawVerticalTrack="true"
+            android:scrollbars="vertical" >
+
+            <TextView
+                android:id="@+id/tv_log"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#B7B7B7"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+        </ScrollView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/RL_Param"
+        android:layout_width="200sp"
+        android:layout_height="130sp"
+        android:layout_below="@id/R2"
+        android:layout_toRightOf="@id/R1"
+        android:paddingRight="5sp" >
+
+        <TextView
+            android:id="@+id/tv_Param1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15sp"
+            android:text="Param1: "
+            android:textColor="@android:color/background_light"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/et_Param1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8sp"
+            android:layout_toRightOf="@id/tv_Param1"
+            android:cursorVisible="false"
+            android:enabled="false"
+            android:text="0.00"
+            android:textColor="#ff0000"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_Param2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/et_Param1"
+            android:layout_marginTop="8sp"
+            android:text="Param2: "
+            android:textColor="@android:color/background_light"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/et_Param2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/et_Param1"
+            android:layout_toRightOf="@id/tv_Param2"
+            android:cursorVisible="false"
+            android:enabled="false"
+            android:text="0.00"
+            android:textColor="#ff0000"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_Param3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/et_Param2"
+            android:layout_marginTop="8sp"
+            android:text="Param3: "
+            android:textColor="@android:color/background_light"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/et_Param3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/et_Param2"
+            android:layout_toRightOf="@id/tv_Param3"
+            android:cursorVisible="false"
+            android:enabled="false"
+            android:text="0.00"
+            android:textColor="#ff0000"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_flymode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80sp"
+            android:layout_marginTop="15sp"
+            android:layout_toRightOf="@id/tv_Param1"
+            android:text=" 飞行模式"
+            android:textColor="@android:color/background_light"
+            android:textSize="20sp" />
+
+        <CheckBox 
+            android:id="@+id/cb_mode1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80sp"
+            android:layout_toRightOf="@id/tv_Param1"
+            android:layout_below="@id/tv_flymode"
+            android:checked="true"
+            android:text="Mode1"
+            android:textSize="16sp"
+            android:textColor="@android:color/background_light" 
+            />
+        
+         <CheckBox 
+            android:id="@+id/cb_mode2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80sp"
+            android:layout_toRightOf="@id/tv_Param1"
+            android:layout_below="@id/cb_mode1"
+            android:checked="false"
+            android:text="Mode2"
+            android:textSize="16sp"
+            android:textColor="@android:color/background_light" 
+            />
+         
+         <CheckBox 
+            android:id="@+id/cb_mode3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80sp"
+            android:layout_toRightOf="@id/tv_Param1"
+            android:layout_below="@id/cb_mode2"
+            android:checked="false"
+            android:text="Mode3"
+            android:textSize="16sp"
+            android:textColor="@android:color/background_light" 
+            />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imgBluetooth"
+        android:layout_width="50sp"
+        android:layout_height="50sp"
+        android:layout_below="@id/R1"
+        android:src="@drawable/bluetooth_alt" />
+
+    <Spinner
+        android:id="@+id/Spinner_BT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/R1"
+        android:layout_marginLeft="8sp"
+        android:layout_toRightOf="@id/imgBluetooth"
+        android:textColor="@android:color/background_light"
+        android:textSize="20sp" >
+    </Spinner>
+
+    <Button
+        android:id="@+id/bt_BT_Refresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/R1"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5sp"
+        android:layout_toRightOf="@id/Spinner_BT"
+        android:onClick="bt_refresh"
+        android:text="刷新串口"
+        android:textColor="#B7B7B7"
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/bt_BT_Open"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/R1"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="7sp"
+        android:layout_toRightOf="@id/bt_BT_Refresh"
+        android:onClick="bt_open_close"
+        android:text="打开串口"
+        android:textColor="#B7B7B7"
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/bt_Plane_Calibrate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgBluetooth"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="80sp"
+        android:layout_marginRight="10sp"
+        android:paddingTop="8sp"
+        android:text="飞机校准"
+        android:textColor="#B7B7B7"
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/bt_Phone_Calibrate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgBluetooth"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="7sp"
+        android:layout_toRightOf="@id/bt_Plane_Calibrate"
+        android:paddingTop="8sp"
+        android:text="手机校准"
+        android:textColor="#B7B7B7"
+        android:textSize="25sp" />
+
+    <RelativeLayout
+        android:id="@+id/R3"
+        android:layout_width="200sp"
+        android:layout_height="match_parent"
+        android:layout_below="@id/bt_Plane_Calibrate"
+        android:paddingRight="5sp"
+        android:paddingTop="10sp" >
+
+        <TextView
+            android:id="@+id/tv_STATUS_LAMP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="8sp"
+            android:text="   状态灯  "
+            android:textColor="#B7B7B7"
+            android:textSize="20sp" />
+
+        <ToggleButton
+            android:id="@+id/Toggle_STATUS_LAMP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tv_STATUS_LAMP"
+            android:textOff="OFF"
+            android:textOn="ON"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_SHINE_LAMP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Toggle_STATUS_LAMP"
+            android:paddingTop="8sp"
+            android:text="   照明灯  "
+            android:textColor="#B7B7B7"
+            android:textSize="20sp" />
+
+        <ToggleButton
+            android:id="@+id/Toggle_SHINE_LAMP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/Toggle_STATUS_LAMP"
+            android:layout_alignRight="@id/Toggle_STATUS_LAMP"
+            android:layout_below="@id/Toggle_STATUS_LAMP"
+            android:layout_toRightOf="@id/tv_SHINE_LAMP"
+            android:textOff="OFF"
+            android:textOn="ON"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_OV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Toggle_SHINE_LAMP"
+            android:paddingTop="8sp"
+            android:text="   避障      "
+            android:textColor="#B7B7B7"
+            android:textSize="20sp" />
+
+        <ToggleButton
+            android:id="@+id/Toggle_OV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/Toggle_STATUS_LAMP"
+            android:layout_alignRight="@id/Toggle_STATUS_LAMP"
+            android:layout_below="@id/Toggle_SHINE_LAMP"
+            android:layout_toRightOf="@id/tv_OV"
+            android:textOff="OFF"
+            android:textOn="ON"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/R4"
+        android:layout_width="300sp"
+        android:layout_height="match_parent"
+        android:layout_below="@id/bt_Phone_Calibrate"
+        android:layout_toRightOf="@id/R3"
+        android:paddingRight="5sp"
+        android:paddingTop="10sp" >
+
+        <Button
+            android:id="@+id/bt_output"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10sp"
+            android:background="@drawable/circlebutton"
+            android:onClick="bt_output"
+            android:text="启动"
+            android:textColor="#008B00"
+            android:textSize="40sp" />
+
+        <Button
+            android:id="@+id/bt_height_add"
+            android:layout_width="95sp"
+            android:layout_height="50sp"
+            android:layout_marginLeft="25sp"
+            android:layout_marginTop="10sp"
+            android:layout_toRightOf="@id/bt_output"
+            android:background="@drawable/up" />
+
+        <Button
+            android:id="@+id/bt_height_reduce"
+            android:layout_width="95sp"
+            android:layout_height="50sp"
+            android:layout_below="@id/bt_height_add"
+            android:layout_marginLeft="25sp"
+            android:layout_marginTop="27sp"
+            android:layout_toRightOf="@id/bt_output"
+            android:background="@drawable/down" />
+    </RelativeLayout>
+
+</RelativeLayout>
